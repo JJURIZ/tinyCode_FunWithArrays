@@ -1,0 +1,225 @@
+*,
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    flex: 1 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    background-image: linear-gradient(#424242, #2b2a2a);
+    color: white;
+}
+
+.currentScoreContainer {
+    font-size: 2rem;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-top: 1rem;
+    padding-left: 5px;
+}
+
+#currentScore {
+    margin-top: 20px;
+}
+
+.mainView {
+    display: flex;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+#mainRow1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#mainRow1,
+#mainRow3 {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+}
+
+#boxOne,
+#boxTwo {
+    display: flex;
+    width: 500px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    text-align: center;
+    margin: 0px 10px 10px 20px;
+    border-radius: 5px;
+}
+
+#boxOne,
+#boxTwo {
+    border: 1px #0D0D0D solid;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    margin: 0px 10px 10px 20px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: large;
+    outline: none;
+    background: #72ABBF;
+}
+
+button:focus {
+    outline: none;
+}
+
+#resetWordButton {
+    background-color: #F0514B;
+}
+
+#resetWordButton:hover {
+    background-color: #f17974;
+}
+
+button:hover {
+    background-color: #9ab6c0;
+}
+
+button:focus #startButton,
+#resetWordButton,
+#switchButton {
+    height: 50px;
+    width: 150px;
+}
+
+.buttonGroupContainer {
+    display: flex;
+    border-radius: 5px;
+    width: 250px;
+    margin: 1rem 5rem 0 6rem;
+}
+
+.startDiv {
+    padding-top: 1em;
+}
+
+.buttonGroup {
+    padding-top: 1em;
+    justify-content: center;
+}
+
+#startButton {
+    background-color: #47A644;
+    color: white;
+}
+
+#startButton:hover {
+    background-color: #95E293;
+}
+
+#switchButton {
+    background-color: #f1ce4f;
+    color: #000;
+    margin-top: 4rem;
+}
+
+#switchButton:hover {
+    background-color: #fff3c4;
+}
+
+input {
+    height: 25px;
+    width: 75px;
+    margin: 0px 10px 10px 20px;
+    border-radius: 5px;
+    border-color: #9498F2;
+    border-style: 1px solid #F2F2F2;
+}
+
+.inputBox {
+    display: flex;
+    margin: -30px 10px 10px 70px;
+}
+
+#spliceSection {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+#spliceInput {
+    height: 50px;
+    width: 150px;
+    margin: 0px 10px 10px 20px;
+}
+
+#spliceButton {
+    margin: 0px 10px 1px 20px;
+}
+
+.playRules {
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-image: linear-gradient(#2b2a2a, #424242);
+    color: white;
+}
+
+#rulesLeft,
+#rulesRight {
+    width: 50%;
+    padding: 2rem 5rem 2rem 5rem;
+}
+
+#rulesLeft {
+    float: left;
+}
+
+#rulesRight {
+    float: right;
+}
+
+#rulesHeader {
+    width: 100%;
+}
+
+#howToPlay {
+    text-align: center;
+    padding-top: 2rem;
+    margin: auto;
+    width: 100%;
+    font-size: 4rem;
+}
+
+#labelcurrentScore {
+    padding-left: 3rem;
+}
+
+#currentScore {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#playRules h3 p {
+    width: 200px;
+}
+
+footer {
+    border: 1px #424242 solid;
+    border-radius: 5px;
+    padding: 2rem 5rem 2rem 5rem;
+    width: 100%;
+    background-image: linear-gradient(#424242, #2b2a2a);
+    color: white;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinyCode_Transform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="script/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>tinyCode_Fun With Arrays</h1>
+            <p>Object: Use the buttons to unscramble the word in as few moves as possible.</p>
+        </header>
+
+        <div class="container">
+            <div class="buttonGroupContainer">
+                <div class="startDiv">
+                    <button type="button" id="startButton"><strong>Start</strong></button>
+                    <button type="button" id="resetWordButton">Reset</button>
+                </div>
+                <div class="buttonGroup">
+                    <button type="button" id="popButton">Pop/Push</button>
+                    <button type="button" id="shiftButton">Shift/Push</button>
+                    <button type="button" id="popUnshiftButton">Pop/Unshift</button>
+                </div>
+                <div class="buttonGroup">
+                    <button type="button" id="shiftPushButton">Shift/Unshift</button>
+                    <button type="button" id="reverseButton">Reverse</button>
+                    <button type="button" id="sortButton">Sort</button>
+                </div>
+                <div class="buttonGroup">
+                    <div id="spliceSection">
+                        <div id="spliceInput">
+                            <label class="inputLabel" for="spliceStart">Start At</label>
+                            <input class="inputBox" type="number" id="spliceStart">
+                        </div>
+                        <div id="spliceInput">
+                            <label class="inputLabel" for="spliceLength">Length</label>
+                            <input class="inputBox" type="number" id="spliceLength">
+                        </div>
+                        <button type="button" id="spliceButton">Splice</button>
+                    </div>
+                </div>
+                <div class="currentScoreContainer">
+                    <h3 id="moves">Moves:</h3>
+                </div>
+                <div id="currentScore"></div>
+            </div>
+
+            <div class="mainView">
+                <div id="boxOne"></div>
+                <button type="button" id="switchButton"><strong>Switch Sides</strong></button>
+                <div id="boxTwo"></div>
+            </div>
+
+            <div class="playRules">
+                <div id="rulesHeader">
+                    <h2 id="howToPlay">How to Play</h2>
+                </div>
+                <div id="rulesLeft">
+                    <h3>Pop/Push</h3>
+                    <p>Removes the last letter from active box and adds the letter to the end of the inactive box</p>
+                    <h3>Shift/Pop</h3>
+                    <p>Removes the first letter from the active box and adds the letter to the end of the inactive box
+                    </p>
+                    <h3>Pop/Unshift</h3>
+                    <p>Removes the last letter from the active box and adds the letter to the start of the inactive box
+                    </p>
+                    <h3>Shift/Unshift</h3>
+                    <p>Removes the first letter from the active box and adds the letter to the start of the inactive box
+                    </p>
+                </div>
+                <div id="rulesRight">
+                    <h3>Reverse</h3>
+                    <p>Reverse the order of the letters in the active box</p>
+                    <h3>Sort</h3>
+                    <p>Sorts the letters in the active box, ascending</p>
+                    <h3>Splice</h3>
+                    <p><em>Start At</em>
+                        <p>Index position/location where Splice will begin.</p>
+                        <p><em>Length</em></p>
+                        <p>Number of letters to cut from active word. Pushes the spliced letters from the active box to the inactive box
+                        </p>
+                </div>
+            </div>
+
+            <footer>
+                <h1>A site created to learn more about JavaScript array methods.</h1>
+                <p>by Jeremy Uriz</p>
+                <p>I recently discovered how much more I learn (and enjoy learning) by creating projects from the ground up. In this case, I wanted to learn more about arrays in JavaScript. During the course of this project I learned (and forgot) more about
+                    arrays than I had in the previous 6 months. The bulk of this code was written over 3 days in June of 2020.
+                </p>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

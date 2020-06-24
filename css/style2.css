@@ -1,0 +1,73 @@
+*,
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: whitesmoke;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.container,
+.body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.mainView {
+    flex: 1 1 auto;
+}
+
+.buttons {
+    order: -1;
+}
+
+#boxOne,
+#boxTwo {
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    margin: 0px 10px 10px 20px;
+    border-radius: 5px;
+}
+
+#boxOne {
+    border: 1px red solid;
+}
+
+#boxTwo {
+    border: 1px blue solid;
+}
+
+button {
+    height: 25px;
+    width: 75px;
+    background-color: lightgray;
+    margin: 0px 10px 10px 20px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+#startButton {
+    border: 1px black solid;
+}
+
+input {
+    height: 25px;
+    width: 50px;
+    margin: 0px 5px 5px 5px;
+    border-radius: 5px;
+    border-color: darkgray border-style;
+}
+
+#currentScore {
+    border: 1px purple solid;
+    width: 50px;
+    height: 50px;
+}

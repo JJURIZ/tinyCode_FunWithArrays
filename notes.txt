@@ -1,0 +1,44 @@
+PUSH: Add to end of an array: array.push(itemToBePushed)
+POP: Remove an item from the end of array: array.pop()
+SHIFT: Reove an item from the beginning of array: array.shift()
+UNSHIFT: Add an item to the beginning of an array: array.unshift(itemTobeUnshifted)
+SPLICE: Remove an item from an index position: array.splice(pos, 1)
+SLICE: Copy an array: array.slice()
+REVERSE: Reerses the items in an array (not letters in a single array item): array.reverse()
+FROM: Turns an iterable object into an array OR executes a method over each item in an array. Array.from()
+MAP: Creates a new array with the results of a funtion called on each element in the arra: array.map()
+
+
+Buttons to use:
+
+1. Pop/Push - When clicked will remove the last letter from one array and place at the end of another array. - DONE
+2. Shift/Unshift - Removes the first letter from one array and places at the beginning of another array. - DONE
+3. Pop/Shift - Removes the last element from one array and places at the beginning of another array. - DONE
+4. Shift/Push - Removes the first element from one array and places at the end of another array. - DONE
+5. Reverse - Reverses the order of the array. - DONE
+6. Splice - Removes x elements of an array and places them at the end of another array. - DONE
+7. Sort - Sorts the array alphabetically. - DONE
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+Need the following:
+-Buttons for each method - DONE
+-Button to reset current word - DONE
+-Divs for displaying jumbled word and working space - DONE
+-Div for displaying the current score - DONE
+-Functions for each button based on methods (listed above) - DONE
+-Variable (or Array) containing current word - DONE
+-Array for left word - DONE
+-Array for right word - DONE
+-Variable for tracking round score - DONE
+
+-Ability to switch button function from boxOne to boxTwo and back.
+-Variable for tracking total score
+-Function to compare jumbled word to current word
+-Button for new word/game
+-Array of possible words
+-Function to shuffle selected word
+
+List of single line code array methods here: https://1loc.dev/#sort-the-characters-of-a-string-in-the-alphabetical-order
+
+
