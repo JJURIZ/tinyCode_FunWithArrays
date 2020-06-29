@@ -30,42 +30,43 @@ let wordBoxOne = document.getElementById("boxOne"),
     wordOne = [],
     wordTwo = [];
 
-
 /*-----State-----*/
 
 let curScore = 0;
 let boxSelected = 0;
 
 
+// enum boxposition {
+//     left, 
+//     right
+// }
+
+
 /*-----Functions------*/
 
-let strWordOne = () => {
-    let joinWord = wordOne.join("");
-    return joinWord;
-
+const strWordOne = () => {
+    return wordOne.join("");
 };
 
-let strWordTwo = () => {
-    let joinWord = wordTwo.join("");
-    return joinWord;
+const strWordTwo = () => {
+    return wordTwo.join("");
 };
 
-let spltString = (word) => {
-    let spltString = word.split("");
-    return spltString;
+const spltString = (word) => {
+    return word.split("");
 }
 
-let setBoxes = () => {
+const setBoxes = () => {
     wordBoxOne.innerText = strWordOne();
     wordBoxTwo.innerText = strWordTwo();
 };
 
-let clearSplice = () => {
+const clearSplice = () => {
     spliceStart.value = "";
     spliceLength.value = "";
 }
 
-let curScoreTracker = () => {
+const curScoreTracker = () => {
     if (wordCheck.length === 0) {
         return
     } else {
@@ -74,7 +75,7 @@ let curScoreTracker = () => {
     }
 }
 
-let shuffle = (array) => {
+const shuffle = (array) => {
     for (let i = wordOne.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         [wordOne[i], wordOne[j]] = [wordOne[j], wordOne[i]];
@@ -82,7 +83,7 @@ let shuffle = (array) => {
     }
 }
 
-let selectWord = () => {
+const selectWord = () => {
     let randomValue = words[Math.floor(Math.random() * words.length)];
     wordCheck = spltString(randomValue);
     wordOne = [...wordCheck];
@@ -90,7 +91,7 @@ let selectWord = () => {
     randWord = [...wordOne];
 }
 
-let winCheck = () => {
+const winCheck = () => {
     if (JSON.stringify(wordOne) === JSON.stringify(wordCheck) && wordCheck.length !== 0 || JSON.stringify(wordTwo) === JSON.stringify(wordCheck) && wordCheck.length !== 0) {
         setTimeout(function() {
             alert(`You've one in ${curScore} clicks!`)
@@ -102,20 +103,26 @@ let winCheck = () => {
 
 };
 
-let boxOneActive = () => {
-    let elem = document.querySelector("#boxOne");
+const fullRefresh = () => {
+    setBoxes();
+    curScoreTracker();
+    winCheck();
+};
+
+const boxOneActive = () => {
+    const elem = document.querySelector("#boxOne");
     elem.style.backgroundColor = '#FFFFFF';
     elem.style.boxShadow = '-1px -1px 10px 0 #47A644';
-    let elem2 = document.querySelector("#boxTwo");
+    const elem2 = document.querySelector("#boxTwo");
     elem2.style.backgroundColor = '#CECFDB';
     elem2.style.boxShadow = 'none';
 };
 
-let boxTwoActive = () => {
-    let elem = document.querySelector("#boxTwo");
+const boxTwoActive = () => {
+    const elem = document.querySelector("#boxTwo");
     elem.style.backgroundColor = '#FFFFFF';
     elem.style.boxShadow = '-1px -1px 10px 0 #47A644';
-    let elem2 = document.querySelector("#boxOne");
+    const elem2 = document.querySelector("#boxOne");
     elem2.style.backgroundColor = '#CECFDB';
     elem2.style.boxShadow = 'none';
 }
@@ -154,16 +161,12 @@ switchButton.addEventListener('click', function() {
 });
 
 popButton.addEventListener('click', function() {
-    if (boxSelected === 0) {
-        let word = wordOne.pop();
-        wordTwo.push(word);
+    if (boxSelected === 0) { //magic number
+        wordTwo.push(wordOne.pop());
     } else {
-        let word = wordTwo.pop();
-        wordOne.push(word);
+        wordOne.push(wordTwo.pop());
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 shiftButton.addEventListener('click', function() {
@@ -174,9 +177,7 @@ shiftButton.addEventListener('click', function() {
         let word = wordTwo.shift();
         wordOne.push(word);
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 popUnshiftButton.addEventListener('click', function() {
@@ -187,9 +188,7 @@ popUnshiftButton.addEventListener('click', function() {
         let word = wordTwo.pop();
         wordOne.unshift(word);
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 shiftPushButton.addEventListener('click', function() {
@@ -200,9 +199,7 @@ shiftPushButton.addEventListener('click', function() {
         let word = wordTwo.shift();
         wordOne.unshift(word);
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 reverseButton.addEventListener('click', function() {
@@ -211,9 +208,7 @@ reverseButton.addEventListener('click', function() {
     } else {
         wordTwo.reverse();
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 sortButton.addEventListener('click', function() {
@@ -222,9 +217,7 @@ sortButton.addEventListener('click', function() {
     } else {
         wordTwo.sort();
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
 });
 
 spliceButton.addEventListener('click', function() {
@@ -240,8 +233,8 @@ spliceButton.addEventListener('click', function() {
     } else {
         wordOne = wordOne.concat(newWord);
     }
-    setBoxes();
-    curScoreTracker();
-    winCheck();
+    fullRefresh();
     clearSplice();
 });
+
+//Need to review notes from Noah. Enum.
