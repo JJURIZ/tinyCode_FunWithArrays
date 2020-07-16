@@ -94,7 +94,7 @@ const selectWord = () => {
 const winCheck = () => {
     if (JSON.stringify(wordOne) === JSON.stringify(wordCheck) && wordCheck.length !== 0 || JSON.stringify(wordTwo) === JSON.stringify(wordCheck) && wordCheck.length !== 0) {
         setTimeout(function() {
-            alert(`You've one in ${curScore} clicks!`)
+            alert(`You've won in ${curScore} clicks!`)
                 // Change this to an onscreen alert. 
         }, 100);
     } else {
